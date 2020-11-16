@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "block_on_md",
+  "description": "generate code-block on md-editor ",
+  "version": "1.0.0",
+  "background" : {
+   "scripts" : ["background.js"]
+ },
+  "icons" : {
+    "48" : "pencil.png"
+  },
+  "commands": {
+  "copy": {
+      "suggested_key": {
+        "default": "Alt+C"
+			},
+			"description": "Copy"
+		},
+		"paste": {
+			"suggested_key": {
+				"default": "Alt+V"
+			},
+			"description": "Paste"
+		}
+	},
+	"permissions": ["tabs", "http://*/*", "https://*/*", "clipboardRead", "clipboardWrite", "contextMenus"]
+}
