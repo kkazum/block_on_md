@@ -4,11 +4,22 @@
   "description": "generate code-block on md-editor ",
   "version": "1.0.0",
   "background" : {
-   "scripts" : ["background.js"]
+    "scripts" : ["background.js"]
  },
   "icons" : {
     "48" : "pencil.png"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
   "commands": {
   "copy": {
       "suggested_key": {
@@ -22,6 +33,6 @@
 			},
 			"description": "Paste"
 		}
-	},
+  },
 	"permissions": ["tabs", "http://*/*", "https://*/*", "clipboardRead", "clipboardWrite", "contextMenus"]
 }
