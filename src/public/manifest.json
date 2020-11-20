@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "block_on_md",
-  "description": "generate code-block on md-editor ",
+  "description": "generate code-block on github ",
   "version": "1.0.0",
   "background" : {
     "scripts" : ["background.js"]
@@ -12,27 +12,12 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "https://github.com/*"
       ],
       "js": [
         "content.js"
       ]
     }
   ],
-  "commands": {
-  "copy": {
-      "suggested_key": {
-        "default": "Alt+C"
-			},
-			"description": "Copy"
-		},
-		"paste": {
-			"suggested_key": {
-				"default": "Alt+V"
-			},
-			"description": "Paste"
-		}
-  },
-	"permissions": ["tabs", "http://*/*", "https://*/*", "clipboardRead", "clipboardWrite", "contextMenus"]
+	"permissions": ["tabs","contextMenus"]
 }
