@@ -5,7 +5,7 @@ chrome.contextMenus.create({
   contexts : ["selection"],
 });
 
-const langs = ['ruby', 'html', 'css', 'javascript', 'md']
+const langs = ['ruby','plain','html', 'css', 'javascript', 'md']
 langs.map(lang => {
   chrome.contextMenus.create({
     id: lang,
